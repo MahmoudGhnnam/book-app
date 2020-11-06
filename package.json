@@ -12,7 +12,7 @@
     "url": "git+https://github.com/MahmoudGhnnam/book-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "mahmoud",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MahmoudGhnnam/book-app/issues"
@@ -27,5 +27,6 @@
     "pg": "^8.4.2",
     "postgres": "^1.0.2",
     "superagent": "^6.1.0"
-  }
+  },
+  "devDependencies": {}
 }

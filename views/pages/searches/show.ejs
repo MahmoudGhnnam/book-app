@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Books</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="/styles/rest.css" >
+    <link rel="stylesheet" href="/styles/base.css" >
+    <link rel="stylesheet" href="/styles/layout.css" >
+    <link rel="stylesheet" href="/styles/modules.css" >
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <header>
-        <h1>Best Books!</h1>
-        <section id='headerImg'>
-            <img src="img/hamburger.jpg">
-        </section>
-        <section id="pageTitle">Search Results</section>
-    </header>
+    <header> <h2> Best Books!</h2></header>
+    <p class='para'>Search by Title or Author</p>
     <main>
-        <% booksResults.forEach(book => { %>
-        <section id="book-template">
-            <p><br>Title: <%= book.title %></p><br><br>
-            <img src="<%= book.image_url %>"><br><br>
-            <p>Author: <%= book.author %></p><br><br>
-            <p id="description">Description: <br><br><%= book.description.substring(0,300) %></p><br>
-        </section>
-        <% }); %>
+    <ul>
+        <% list.forEach(e=>{ %>
+           <div id='result'><img src='<%= e.img %>'>
+            <br>
+            <h3><%= e.title %></h2> 
+            
+             <h5><%= e.authors %></h4>
+             
+            <p> <%= e.description %> </p>
+            </div> 
+       <% }) %>
+        
+    </ul>
     </main>
 </body>
-</body>
-
 </html>
