@@ -97,8 +97,7 @@ function hadnelSearch(req, res) {
   // console.log('s :', searchBy);
   // console.log('POST request: ', req.body);
   // console.log(req.body);
-  superagent.get(url)
-    .then(data => {
+  superagent.get(url).then(data => {
       let arr = data.body.items.map(e => {
         let newbook = new Book(e);
         return newbook;
