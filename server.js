@@ -10,7 +10,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 const client = new pg.Client(process.env.DATABASE_URL);
 
@@ -19,12 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('./public'))
 
-client.connect().then(() => {
-  app.listen(PORT, () => {
-    console.log(`listening to port ${PORT}`);
-  });
+// client.connect().then(() => {
+//   app.listen(PORT, () => {
+//     console.log(`listening to port ${PORT}`);
+//   });
 
-})
+// })
 
 
 //------------routes---------
@@ -170,5 +170,6 @@ function Book(data) {
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`);
 });
+
 
 
